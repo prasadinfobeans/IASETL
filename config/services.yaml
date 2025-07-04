@@ -1,0 +1,11 @@
+## YAML Template.
+---
+
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  IASETL\Bundle\:
+    resource: '../../src/*'
+    exclude: '../../src/{DependencyInjection,Laravel}'

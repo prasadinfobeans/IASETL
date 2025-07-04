@@ -1,0 +1,22 @@
+{
+  "name": "iasetl/bundle",
+  "description": "IAS ETL Process - Symfony 7 Bundle",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "IASETL\\Bundle\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.1",
+    "symfony/dependency-injection": "^7.0",
+    "symfony/http-kernel": "^7.0"
+  },
+  "require-dev": {
+    "symfony/framework-bundle": "^7.0",
+    "phpunit/phpunit": "^10.0"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
