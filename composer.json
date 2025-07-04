@@ -1,22 +1,26 @@
 {
   "name": "iasetl/bundle",
-  "description": "IAS ETL Process - Symfony 7 Bundle",
+  "description": "IAS ETL Process - Bundle",
   "type": "library",
-  "license": "MIT",
+  "require": {
+    "php": ">=8.1",
+    "symfony/dependency-injection": "^6.0 || ^7.0",
+    "symfony/http-kernel": "^6.0 || ^7.0",
+    "illuminate/support": "^10.0|^11.0"
+  },
   "autoload": {
     "psr-4": {
       "IASETL\\Bundle\\": "src/"
+    },
+    "files": [
+      "config/services.yaml"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "IASETL\\Bundle\\Laravel\\IASServiceProvider"
+      ]
     }
-  },
-  "require": {
-    "php": ">=8.1",
-    "symfony/dependency-injection": "^7.0",
-    "symfony/http-kernel": "^7.0"
-  },
-  "require-dev": {
-    "symfony/framework-bundle": "^7.0",
-    "phpunit/phpunit": "^10.0"
-  },
-  "minimum-stability": "stable",
-  "prefer-stable": true
+  }
 }
