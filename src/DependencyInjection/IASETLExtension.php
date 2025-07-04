@@ -2,10 +2,9 @@
 
 namespace IASETL\Bundle\DependencyInjection;
 
-use Symfony\Component\Config\FileLocator;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\Config\FileLocator;
 
 class IASETLExtension extends Extension
 {
@@ -13,9 +12,8 @@ class IASETLExtension extends Extension
     {
         $loader = new YamlFileLoader(
             $container,
-            new FileLocator(dirname(__DIR__, 2) . '/config')
+            new FileLocator(__DIR__.'/../Resources/config') // ✅ updated path
         );
-
         $loader->load('services.yaml');
     }
 }
